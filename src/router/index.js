@@ -6,6 +6,7 @@ import HelloWorld from '../components/HelloWorld.vue';
 import Category from '../components/Category.vue';
 import Comment from '../components/Comment.vue';
 import Blogs from '../components/Blogs.vue';
+import BlogsList from '../components/BlogsList';
 Vue.use(VueRouter);
 
 const originalPush = VueRouter.prototype.push;
@@ -42,6 +43,11 @@ export default new VueRouter({
       path: '/create',
       name: CreateBlog,
       component: CreateBlog
+    },
+    {
+      path: '/blogList',
+      name: BlogsList,
+      component: BlogsList
     }
   ],
   mode: 'history'

@@ -120,7 +120,6 @@ export default {
       this.buttonLabel = '修改博客';
     }
     axios.get('/tag/all').then((res) => {
-      console.log(res.data.data);
       this.ruleForm.options = res.data.data;
     });
   }
