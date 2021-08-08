@@ -10,23 +10,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/tag/': {
-        target: 'http://16od297707.wicp.vip:80', // 开发环境下要跨域访问的接口域名
-        changeOrigin: true // 是否跨域
-      },
-      '/blog/': {
-        target: 'http://16od297707.wicp.vip:80', // 开发环境下要跨域访问的接口域名
-        changeOrigin: true // 是否跨域
-      },
-      '/comment/': {
-        target: 'http://16od297707.wicp.vip:80', // 开发环境下要跨域访问的接口域名
-        changeOrigin: true // 是否跨域
+      '/api/': {
+        target: 'http://192.168.0.102:8080', // 开发环境下要跨域访问的接口域名
+        changeOrigin: true, // 是否跨域
+        pathRewrite: {
+          '^/api': ''   //需要rewrite的,
+      } 
       }
     },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -62,7 +57,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
