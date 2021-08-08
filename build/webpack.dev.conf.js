@@ -44,9 +44,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     watchOptions: {
       poll: config.dev.poll
     },
-    before(app) {
-      Mock(app);
-    }
+    // before(app) {
+    //   Mock(app);
+    // }
   },
   plugins: [
     new webpack.DefinePlugin({

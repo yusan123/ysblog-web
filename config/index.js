@@ -11,11 +11,15 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/tag/': {
-        target: 'http://192.168.0.102:8080', // 开发环境下要跨域访问的接口域名
+        target: 'http://16od297707.wicp.vip:80', // 开发环境下要跨域访问的接口域名
         changeOrigin: true // 是否跨域
       },
       '/blog/': {
-        target: 'http://192.168.0.102:8080', // 开发环境下要跨域访问的接口域名
+        target: 'http://16od297707.wicp.vip:80', // 开发环境下要跨域访问的接口域名
+        changeOrigin: true // 是否跨域
+      },
+      '/comment/': {
+        target: 'http://16od297707.wicp.vip:80', // 开发环境下要跨域访问的接口域名
         changeOrigin: true // 是否跨域
       }
     },
