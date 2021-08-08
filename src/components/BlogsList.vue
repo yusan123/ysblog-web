@@ -1,6 +1,6 @@
 <template>
   <div class="top-title">
-    <h2>xxx的博客</h2>
+    <h2>yusen的博客</h2>
     <el-menu
       :default-active="activeIndex"
       class="el-menu-demo"
@@ -17,8 +17,8 @@
     </el-menu>
       <router-link
         :to="{ path: '/blogs' }"
-        style="float: right; margin-right: 40px"
-        >返回</router-link
+        style="position:fixed;font-size:30px;right:0;top:180px"
+        >前往后台管理页面>>></router-link
       >
     <el-card class="box-card" v-for="item in blogContentList" :key="item.id">
       <div slot="header" class="clearfix">

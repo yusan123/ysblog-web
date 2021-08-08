@@ -2,7 +2,7 @@
 <template>
   <div>
     <el-button type="primary" @click="create">添加</el-button>
-    <router-link :to="{ path: '/blogList' }">查看</router-link>
+    <router-link :to="{ path: '/blogList' }" style="font-size: 20px; margin-left: 100px">前往用户页面>>></router-link>
     <el-table :data="tableData" border style="width: 85%">
       <el-table-column prop="title" label="标题" width="200"> </el-table-column>
       <el-table-column prop="createTime" label="创建时间" width="200">
