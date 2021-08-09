@@ -14,8 +14,8 @@ module.exports = {
         target: 'http://192.168.0.102:8080', // 开发环境下要跨域访问的接口域名
         changeOrigin: true, // 是否跨域
         pathRewrite: {
-          '^/api': ''   //需要rewrite的,
-      } 
+          '^/api': '/api'   //需要rewrite的,
+        }
       }
     },
 

@@ -74,6 +74,7 @@ export default {
 .right {
   margin-left: 100px;
   flex: 1;
+  margin-top: 40px;
   height: 100%;
 }
 </style>

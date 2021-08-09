@@ -22,7 +22,7 @@
       >
     <el-card class="box-card" v-for="item in blogContentList" :key="item.id">
       <div slot="header" class="clearfix">
-        <span style="font-size: 28px; color: blue"> {{ item.title }}</span>
+        <span style="font-size: 28px; color: blue;font-weight: 700"> {{ item.title }}</span>
 
         <el-button
           style="float: right; padding: 3px 0"
@@ -38,11 +38,13 @@
           :key="tag.id"
           class="tag-click"
           @click="filter(tag)"
-          >{{ tag.name }}</el-tag
+        >{{ tag.name }}
+        </el-tag
         >
       </div>
-      创建时间<span> {{ item.createTime }}</span> 创建人<span> admin</span>
-      评论数<span> （100）</span>
+      <div style="font-size: 10px;color: gray">
+        创建时间<span> {{ item.createTime }}</span> 创建人:<span>admin </span>评论数<span>({{ item.commentCount }})</span>
+      </div>
       <div style="margin-top: 20px; text-align: center">
         {{ item.context }}
       </div>
@@ -52,29 +54,30 @@
         <div
           style="font-weight: 700; font-size:28px; color: blue; margin-bottom:20px;"
         >
-         
+
         </div>
-      
+
         <p style="text-align:left;  text-indent: 20px;margin-top: 20px;">
-         
+
         </p>
       </div>
     </div> -->
   </div>
 </template>
 <script>
-import axios from 'axios';
-export default {
-  data() {
-    return {
-      activeIndex: '1',
-      blogContentList: [],
-      navItems: [],
-    };
-  },
-  mounted() {
-    this.getAlltags();
-    this.getAllBlog();
+  import axios from 'axios';
+
+  export default {
+    data() {
+      return {
+        activeIndex: '1',
+        blogContentList: [],
+        navItems: [],
+      };
+    },
+    mounted() {
+      this.getAlltags();
+      this.getAllBlog();
   },
   methods: {
     handleSelect(){
